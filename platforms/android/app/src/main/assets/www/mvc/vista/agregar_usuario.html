@@ -1,0 +1,65 @@
+﻿
+<!-- Esta ventana permite agregar un nuevo usuario al sistema,
+	 solamente solicita el dni y el rol que ocupara (lo debe
+	 seleccionar de una lista desplegable). Cada usuario puede
+	 agregar nuevos usuarios, pero siempre de un rol cuyo nivel
+	 de jeraquia sea el inmediato siguiente menor.
+	 Asume como contraseña el mismo dni y deja vacio el nombre.
+-->
+
+<!DOCTYPE html>
+<html>
+<!-- Cabecera -->	
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<!-- Archivos de cordova, jquery y jquery mobile incluidos antes del body para que tome los estilos
+	 desde que se arranca la vista-->	 
+		<link rel="stylesheet" href="../../jquery/jquery.mobile-1.4.5.min.css">
+		<script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="../../jquery/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="../../cordova.js"></script>
+        <title>Agregar Nuevo Usuarios</title>
+    </head>
+<!-- Cuerpo -->
+    <body onload="inicializarVentana()">
+        <div data-role="page" id="pgLogin">
+			<div data-role="header">
+				<h1>Agregar Nuevo Usuario</h1>
+				<h1 id="h1Usuario"></h1>				
+				<h1 id="h1Rol"></h1>				
+			</div>
+			<div data-role="main" class="ui-content" >
+				<form >
+					<label id="lbDni" >Dni Nuevo Usuario:</label>
+					<input type="text" id="inDni" value="">
+					<label id="lbDni" >Rol Nuevo Usuario:</label>
+					<div id="diRol">
+						<select name="seRol" id="seRol">
+						</select>
+					</div>
+					<br />
+					<label id="lbContrasena" >Contraseña Usuario Actual:</label>
+					<input type="password" id="inContrasena" value="">
+				</form >
+				<br />
+				<br />
+				<div id="div_lyBotones" >
+					<button class="ui-btn" id="btAgregar">Agregar</button>
+					<br />
+					<button class="ui-btn" id="btRetornar">Retornar</button>
+				</div>
+			</div>
+	    </div>
+<!-- Archivos correspondientes al controlador y modelo -->	
+		<script type="text/javascript" src="../controlador/agregar_usuario.js"></script>
+    	<script type="text/javascript" src="../modelo/negocio/neg_agregar_usuario.js"></script>
+		<script type="text/javascript" src="../modelo/dto/dto_usuario.js"></script>
+		<script type="text/javascript" src="../modelo/dao/dao_usuario.js"></script>
+		<script type="text/javascript" src="../modelo/dto/dto_usuario_rol.js"></script>
+		<script type="text/javascript" src="../modelo/dao/dao_usuario_rol.js"></script>
+		<script type="text/javascript" src="../modelo/dto/dto_rol.js"></script>
+		<script type="text/javascript" src="../modelo/dao/dao_rol.js"></script>
+		<script type="text/javascript" src="../modelo/utilidades/uti_sha256.js"></script>
+	</body>
+</html>
