@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
        <meta charset="utf-8">
@@ -7,41 +7,45 @@
         <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
         <script type="text/javascript" src="../../jquery/jquery.mobile-1.4.5.min.js"></script>
         <title>Ingreso de Usuarios</title>
-		<link rel="stylesheet"  href="login.css"/ > 
+		<link rel="stylesheet"  href="registrarse.css"/ > 
        
     </head>
-    <body		
+<!-- Cuerpo -->
+    <body 
+ 	
        <div data-role="page" id="pgLogin">
             <div id="titulo" data-role="header">
                  <h1 style = "font-size: 40px;">B-IES</h1>
-				 <h2 style = "font-size: 20px;">Inicio</h2>
+				 
             </div>
             <div data-role="main" class="ui-content">
                 <form >
-                    <label id="lbUsuario" >Usuario: </label>
-                    <input type="text" id="inUsuario" value="">
-                    <br>
-                    <label id="lbContrasena" >Contraseña:</label>
-                    <input type="password" id="inContrasena" value="">
+				<h2 style = "font-size: 20px;">Registrarse</h2>
+                    <label id="lbDni" >Ingrese su DNI</label>
+					<input type="text" id="inDni" value="">
+					<label id="lbDni" >Ingrese su nombre</label>
+					<input type="text" id="inName" value="">
+					<label id="lbDni" >Ingrese su apellido</label>
+					<input type="text" id="inApe" value="">
+					<label id="lbDni" >Ingrese su correo</label>
+					<input type="text" id="inMail" value="">
                 </form >
                 <br>
                 <br>
                 <div id="div_lyBotones" >
-                    <button class="ui-btn" id="btIngresar">Ingresar</button>
-                    <br>
-                    <button class="ui-btn" id="btRegistrarse">Registrarse</button>
-					<br>
-					<br>			
-					<button class="ui-btn" id="btBase">Base y condiciones</button>
+                    <button class="ui-btn" id="btGuardar">Guardar</button>
+					<br />
+					<button class="ui-btn" id="btAtras">Atras</button>
+					<br />
                 </div>
             </div>
         </div>
 		
         <script type="text/javascript" src="../controlador/login.js"></script>
+		 <script type="text/javascript" src="../controlador/registrarse.js"></script>
         <script type="text/javascript" src="../../cordova.js"></script>
         <script type="text/javascript" src="../modelo/dto/dto_usuario.js"></script>
         <script type="text/javascript" src="../modelo/negocio/neg_login.js"></script>
         <script type="text/javascript" src="../modelo/dao/dao_usuario.js"></script>
         <script type="text/javascript" src="../modelo/utilidades/uti_sha256.js"></script>
     </body>
-</html>

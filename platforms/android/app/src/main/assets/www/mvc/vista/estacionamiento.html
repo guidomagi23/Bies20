@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link rel="stylesheet" href="../../jquery/jquery.mobile-1.4.5.min.css">
+        <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="../../jquery/jquery.mobile-1.4.5.min.js"></script>
+        <title>Estacionamiento</title>
+    </head>
+    <body>
+        <div data-role="page" id="pgLogin">
+            <div data-role="header">
+                <h1>B-IES</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <form >
+                    <label id="lbSeleccioneEst" >SELECCIONE EL ESTACIONAMIENTO </label>
+                    <label id="lbDisponible" >Disponible: </label>
+                    <br>
+                </form >
+                <div id="div_lyBotones" >
+                    <span style="border-image: initial; border: 2px solid black;">40%</span>
+                    <button class="ui-btn" id="btDar">Dar</button>
+                    <br>
+                    <span style="border-image: initial; border: 2px solid black;">10%</span>
+                    <button class="ui-btn" id="btSanJeronimo">San Jerónimo</button>
+                    <br>
+                    <span style="border-image: initial; border: 2px solid black;">20%</span>
+                    <button class="ui-btn" id="btTucuman">Tucuman</button>
+                    <br>
+                    <button class="ui-btn" id="btEstacionar">ESTACIONAR</button>
+                    <br>
+                    <label id="lbHoraCierre" >HORA DE CIERRE 22:00HS </label>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../../cordova.js"></script>
+    </body>
+</html>

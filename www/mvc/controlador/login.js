@@ -1,7 +1,17 @@
-$('#btSalir').click(salir);
-function salir(){
-    navigator.app.exitApp();
+document.getElementById('titulo').style.backgroundColor= "#7a1b0c";
+document.getElementById('pgLogin').style.backgroundColor= "#7a1b0c";
+
+$('#btRegistrarse').click(registrarse);
+function registrarse(){
+	window.location.href='../vista/registrarse.html?usuario=';
 }
+
+$('#btBase').click(Base);
+function Base(){
+	 confirm("La institucion no se hace cargo por robo o daños fisicos del transporte. Al ingresar usted acepta estas condiciones."); 
+}
+   //aqui ira lo que abre la ventana de las bases
+
 
 $('#btIngresar').click(ingresar);
 function ingresar(){

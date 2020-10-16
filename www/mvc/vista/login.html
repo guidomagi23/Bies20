@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+       <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <link rel="stylesheet" href="../../jquery/jquery.mobile-1.4.5.min.css">
         <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
         <script type="text/javascript" src="../../jquery/jquery.mobile-1.4.5.min.js"></script>
-		<link rel="stylesheet" href="css/login.css"/ >
         <title>Ingreso de Usuarios</title>
+		<link rel="stylesheet"  href="login.css"/ > 
+       
     </head>
-    <body
-		 
-        <div data-role="page" id="pgLogin">
-            <div data-role="header">
-                <h1>Ingreso al Sistema<h1>
+    <body		
+       <div data-role="page" id="pgLogin">
+            <div id="titulo" data-role="header">
+                 <h1 style = "font-size: 40px;">B-IES</h1>
+				 
             </div>
             <div data-role="main" class="ui-content">
                 <form >
+				<h2 style = "font-size: 20px;">Inicio</h2>
                     <label id="lbUsuario" >Usuario: </label>
                     <input type="text" id="inUsuario" value="">
                     <br>
@@ -28,10 +30,14 @@
                 <div id="div_lyBotones" >
                     <button class="ui-btn" id="btIngresar">Ingresar</button>
                     <br>
-                    <button class="ui-btn" id="btSalir">Salir</button>
+                    <button class="ui-btn" id="btRegistrarse">Registrarse</button>
+					<br>
+					<br>			
+					<button class="ui-btn" id="btBase">Base y condiciones</button>
                 </div>
             </div>
         </div>
+		
         <script type="text/javascript" src="../controlador/login.js"></script>
         <script type="text/javascript" src="../../cordova.js"></script>
         <script type="text/javascript" src="../modelo/dto/dto_usuario.js"></script>
