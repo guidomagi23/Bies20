@@ -12,7 +12,7 @@
 // Recibe como parametros el id del usuario para el que se solicitan los roles
 // y el arreglo vacio disponible para ser completado.
 //
-// Retorna una "señal" con el resultado del acceso al servidor y el 
+// Retorna una "seï¿½al" con el resultado del acceso al servidor y el 
 // mismo arreglo recibido como parametro con la informacion (si habia)
 //
 function leer_roles_por_usuario(idUsuario, arreglo_roles) {
@@ -31,7 +31,7 @@ function leer_roles_por_usuario(idUsuario, arreglo_roles) {
 		type: 'post',
 		dataType: 'json',
 		async: false,
-		url: 'https://iestsdsids2.000webhostapp.com/Usuarios/usuario_obtener_roles.php',
+		url: 'https://iestsdsids2.000webhostapp.com/Public/usuario_obtener_roles.php',
 		success: function(respuesta) {
 			respuestaRecibida(respuesta, arreglo_roles);
 			resp_leer_roles = respuesta[0]['estado'];

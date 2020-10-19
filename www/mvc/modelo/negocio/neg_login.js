@@ -20,7 +20,7 @@ var usu_ingreso = new DtoUsuario();
 // "3" si esta permitido ingresar al menu del sistema y "4" si
 // se produjo error de conexion
 //
-function validar_ingreso(dni, contrasena) {
+function validar_ingreso(dni) {
 
 //Asigna el dni recibido como parametro al objeto creado	
 	usu_ingreso.setDni = dni;
@@ -39,17 +39,16 @@ function validar_ingreso(dni, contrasena) {
 	} else {
 //Si la contraseña ingresada esta vacia o es distinta a la de la tabla retorna "1"
 //		alert ("contraseña: " + sha256(contrasena));
-		if (contrasena == "" || sha256(contrasena) != usu_ingreso.getContrasena) {
+		//if (contrasena == "" || sha256(contrasena) != usu_ingreso.getContrasena) {
 //		if (contrasena == "" || contrasena != usu_ingreso.getContrasena) {
-			return "1";
-		} else {
+		//	return "1";
+		//} else {
 //Si la contraseña es igual al dni retorna "2"
-			if (dni == contrasena){
-				return "2";
-			} else {
+			//if (dni == contrasena){
+			//	return "2";
+			//} else {
 //Si esta todo bien retorna "3"
-				return "3";
-			}
+			//	return "3";
+			//}
 		}
-	}
-}	
+}
