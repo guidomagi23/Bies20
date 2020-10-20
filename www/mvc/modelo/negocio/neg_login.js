@@ -29,26 +29,25 @@ function validar_ingreso(dni) {
 //Llama a la "dao" para que acceda al webservice 
 //Envia el objeto de tipo DtoUsuario como parametro y recibe una String
 	resp_leer_usuario = leer_por_dni(usu_ingreso);
-//Si no se pudo conectar retorna "4"
-	if (resp_leer_usuario == "er") {
-		return "4";
-	}
-//Si no se pudo conectar retorna "1"
-	if (resp_leer_usuario != "ok") {
-		return "1";
-	} else {
-//Si la contraseña ingresada esta vacia o es distinta a la de la tabla retorna "1"
-//		alert ("contraseña: " + sha256(contrasena));
-		//if (contrasena == "" || sha256(contrasena) != usu_ingreso.getContrasena) {
-//		if (contrasena == "" || contrasena != usu_ingreso.getContrasena) {
-		//	return "1";
-		//} else {
-//Si la contraseña es igual al dni retorna "2"
-			//if (dni == contrasena){
-			//	return "2";
-			//} else {
-//Si esta todo bien retorna "3"
-			//	return "3";
-			//}
+	
+	consulta_estacionado = "select es.*, bi.bicicletero_nombre, bi.bicicletero_ubicacion from estacionamiento es left join bicicletero bi on (es.id_bicicletero = bi.id_bicicletero) where es.id_usuario = :id_usuario and es.fecha_estacionamiento = current_date and es.hora_fin is null"
+	
+	consulta_promedio = "select bh.id_bicicletero_horario, b.id_bicicletero, b.bicicletero_nombre, b.bicicletero_ubicacion, b.capacidad, count(e.id_estacionamiento) as ocupado, (count(e.id_estacionamiento) / b.capacidad * 100) as porcentaje_ocupado from bicicletero b left join bicicletero_horario bh on (b.id_bicicletero = bh.id_bicicletero) left join estacionamiento e on (bh.id_bicicletero_horario = e.id_bicicletero_horario) and (e.fecha_estacionamiento = current_date) and (e.hora_fin is null) where :horaingreso between bh.hora_inicio and bh.hora_fin and bh.dia_semana = :dia_semana group by bh.id_bicicletero_horario, b.id_bicicletero, b.bicicletero_nombre, b.bicicletero_ubicacion, b.capacidad"
+}
+//dni mal
+	if (resp_leer_usuario != null) {
+		
+		if (consulta_estacionado = ) {
+		return "no esta estacionado";
 		}
+		
+	 //Si no esta estacionado		
+	}else return "ingreso incorrecto";
+
+	
+
+	
+	
+	
+	"select bh.id_bicicletero_horario, b.id_bicicletero, b.bicicletero_nombre, b.bicicletero_ubicacion, b.capacidad, count(e.id_estacionamiento) as ocupado, (count(e.id_estacionamiento) / b.capacidad * 100) as porcentaje_ocupado from bicicletero b left join bicicletero_horario bh on (b.id_bicicletero = bh.id_bicicletero) left join estacionamiento e on (bh.id_bicicletero_horario = e.id_bicicletero_horario) and (e.fecha_estacionamiento = current_date) and (e.hora_fin is null) where :horaingreso between bh.hora_inicio and bh.hora_fin and bh.dia_semana = :dia_semana group by bh.id_bicicletero_horario, b.id_bicicletero, b.bicicletero_nombre, b.bicicletero_ubicacion, b.capacidad"
 }

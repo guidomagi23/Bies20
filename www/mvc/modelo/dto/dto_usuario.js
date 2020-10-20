@@ -6,11 +6,11 @@
 // 
 class DtoUsuario {
 	constructor(setId = 0, setNombre = '', 
-				setDni = 0, setContrasena = '') {
+				setDni = 0, ) {
 		this.id = setId;
 		this.nombre = setNombre;
 		this.dni = setDni;
-		this.contrasena = setContrasena;
+		
 	}	
 	
 	set setId(id) {
@@ -25,9 +25,7 @@ class DtoUsuario {
 		this.dni = dni;
 	}	
 	
-	set setContrasena(contrasena) {
-		this.contrasena = contrasena;
-	}	
+		
 
 	
 	get getId() {
@@ -42,8 +40,6 @@ class DtoUsuario {
 		return this.dni;
 	}
 	
-	get getContrasena() {
-		return this.contrasena;
-	}
+	
 	
 }	
