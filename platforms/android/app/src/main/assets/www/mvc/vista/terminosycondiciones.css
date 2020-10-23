@@ -1,0 +1,35 @@
+h1{
+    color: white; 
+	text-align: center;
+	
+}
+
+
+h2{
+	
+    color: white; 
+	text-align: center;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+text{
+	
+    color: white; 
+	text-align: center;
+	font-size: 16px;
+	font-weight: normal;
+	text-align: justify;
+	font-style:	normal;
+}
+
+textnegrita{
+	
+	color: white; 
+	text-align: center;
+	font-size: 16px;
+	
+	text-align: justify;
+	font-style:	normal;
+	text-decoration: underline;
+}
