@@ -18,9 +18,11 @@ function ingresar(){
     var inUsuario = $('#inUsuario');
     var usuario = inUsuario.val().trim();
     inUsuario.val(usuario);
-
+  
     var res_validar_ingreso = validar_ingreso(usuario);
+    alert ("entro validar ingreso");
     if (res_validar_ingreso == "1") {
+        window.location.href='../vista/estacionamiento.html?usuario=' + usuario;
         alert ("Ingreso incorrecto");
     }else{
         if (res_validar_ingreso == "2"){

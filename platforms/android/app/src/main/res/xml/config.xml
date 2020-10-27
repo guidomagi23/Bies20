@@ -4,6 +4,10 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
     <name>B-IES</name>
     <description>
         A blank PhoneGap app.
@@ -14,4 +18,9 @@
     <content src="index.html" />
     <access origin="*" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="SplashScreenDelay" value="6000" />
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenSpinner" value="true" />
+    <preference name="SplashScreenSpinnerColor" value="red" />
+    <preference name="splashShowOnlyFirstTime" value="false" />
 </widget>

@@ -8,7 +8,7 @@ function registrarse(){
 
 $('#btBase').click(Base);
 function Base(){
-	 confirm("La institucion no se hace cargo por robo o daños fisicos del transporte. Al ingresar usted acepta estas condiciones."); 
+	window.location.href='../vista/terminosycondiciones.html?usuario';
 }
    //aqui ira lo que abre la ventana de las bases
 
@@ -18,15 +18,13 @@ function ingresar(){
     var inUsuario = $('#inUsuario');
     var usuario = inUsuario.val().trim();
     inUsuario.val(usuario);
-    var inContrasena = $('#inContrasena');
-    var contrasena = inContrasena.val().trim();
-    inContrasena.val(contrasena);
-    var res_validar_ingreso = validar_ingreso(usuario, contrasena);
+
+    var res_validar_ingreso = validar_ingreso(usuario);
     if (res_validar_ingreso == "1") {
         alert ("Ingreso incorrecto");
     }else{
         if (res_validar_ingreso == "2"){
-            window.location.href='../vista/act_dat_usuario.html?usuario=' + usuario;
+            window.location.href='../vista/estacionamiento.html?usuario=' + usuario;
         }else{
             if (res_validar_ingreso == "3" ) {
                 window.location.href='../vista/menu_sistema.html?usuario='+ usuario + '&id=' + usu_ingreso.getId;

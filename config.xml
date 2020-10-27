@@ -9,4 +9,12 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+	
+	
+	<preference name="SplashScreenDelay" value="6000" />
+    <preference name="SplashScreen" value="splash" />
+	<preference name="SplashScreenSpinner" value="true"/>
+	<preference name="SplashScreenSpinnerColor" value="red"/>
+	<preference name="splashShowOnlyFirstTime" value="false"/> 
+	
 </widget>

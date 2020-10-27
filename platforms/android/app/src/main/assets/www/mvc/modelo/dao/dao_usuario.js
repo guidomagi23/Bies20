@@ -11,7 +11,7 @@
 // Recibe como parametro un "DTO" dentro del cual se encuentra el
 // dni que se quiere leer
 //
-// Retorna una "señal" con el resultado del acceso al servidor y el 
+// Retorna una "seï¿½al" con el resultado del acceso al servidor y el 
 // mismo DTO recibido como parametro con la informacion (si habia)
 //
 function leer_por_dni(dtoUsuario) {
@@ -20,30 +20,26 @@ function leer_por_dni(dtoUsuario) {
 //  "ok" (encontro al usuario)
 	var resp_leer_usuario = "";
 //Obtiene el dni del objeto recibido como parametro	
-	dni = dtoUsuario.getDni;
+	Dni = dtoUsuario.getDni;
 //Pregunta si es numerico o vacio
-	if (isNaN(dni) || dni == "") { 
+	if (isNaN(Dni) || Dni == "") { 
 
     }else{ 
 //Arma el "post" para enviarlo por ajax
 		var parametros = {
-			"Dni" : dni,
+			"DNI" : Dni,
 		};
-//Invoca a la url donde se encuentra el archivo "usuario_leer_por_dni.php"
+//Invoca a la url donde se encuentra el archivo "usuario_login.php"
 		$.ajax({
 			data: parametros,
 			type: 'post',
 			dataType: 'json',
 			async: false,
-			url: 'https://iestsdsids2.000webhostapp.com/Usuarios/usuario_leer_por_dni.php',
+			url: 'https://id15075672_bies_prueba.000webhostapp.com/BIES/usuario_login.php',
 			success: function(respuesta) {
-				resp_leer_usuario = respuesta['estado'];
+			resp_leer_usuario = "OK";	
 //Completa la informacion del DTO con la respuesta del servidor
-				dtoUsuario.setId = respuesta['Id'];
-				dtoUsuario.setNombre = respuesta['Nombre'];	
-				dtoUsuario.setDni = respuesta['Dni'];
-				dtoUsuario.setContrasena = respuesta['Contrasena'];	
-
+				dtoUsuario.setId = respuesta['ID_USUARIO'];
 			},
 			error: function(jqXHR, textStatus, errorMessage) {
 				respuestaNoRecibida(jqXHR, textStatus);
@@ -66,11 +62,11 @@ function respuestaNoRecibida(jqXHR, textStatus){
 }	
 
 
-// Funcion destinada a modificar el nombre y/o contraseña de un usuario x por su id.
+// Funcion destinada a modificar el nombre y/o contraseï¿½a de un usuario x por su id.
 //
 // Recibe como parametro un "DTO" dentro del cual se encuentran los datos
 //
-// Retorna una "señal" con el resultado del acceso al servidor
+// Retorna una "seï¿½al" con el resultado del acceso al servidor
 //
 function modif_por_id(dtoUsuario) {
 //Define la variable para responder si encontrÃ³ o no el usuario
@@ -80,18 +76,16 @@ function modif_por_id(dtoUsuario) {
 
 //Arma el "post" para enviarlo por ajax
 	var parametros = {
-		"Id" : dtoUsuario.getId,
-		"Nombre" : dtoUsuario.getNombre,
-		"Contrasena" : dtoUsuario.getContrasena,
+		"ID_USUARIO" : dtoUsuario.getID_USUARIO,
 	};
 
 //Invoca a la url donde se encuentra el archivo "usuario_modif_por_id.php"
-	$.ajax({
+	/* $.ajax({
 		data: parametros,
 		type: 'post',
 		dataType: 'json',
 		async: false,
-		url: 'https://iestsdsids2.000webhostapp.com/Usuarios/usuario_modif_por_id.php',
+		url: 'https://id15075672_bies_prueba.000webhostapp.com/Usuarios/usuario_modif_por_id.php',
 		success: function(respuesta) {
 			resp_mod_usuario = respuesta['estado'];
 		},
@@ -103,13 +97,14 @@ function modif_por_id(dtoUsuario) {
 	
 	return resp_mod_usuario;
 }
+*/
 
 
 // Funcion destinada a agregar un usuario.
 //
 // Recibe como parametro un "DTO" dentro del cual se encuentran los datos
 //
-// Retorna una "señal" con el resultado del acceso al servidor
+// Retorna una "seï¿½al" con el resultado del acceso al servidor
 //
 function agregar_usuario(dtoUsuario) {
 //Define la variable para responder si encontrÃ³ o no el usuario
@@ -119,9 +114,9 @@ function agregar_usuario(dtoUsuario) {
 
 //Arma el "post" para enviarlo por ajax
 	var parametros = {
-		"Dni" : dtoUsuario.getDni,
-		"Nombre" : dtoUsuario.getNombre,
-		"Contrasena" : dtoUsuario.getContrasena,
+		"DNI" : dtoUsuario.getDni,
+		"NOMBRE_USUARIO" : dtoUsuario.getNombre,
+	
 	};
 //Invoca a la url donde se encuentra el archivo "usuario_agregar.php"
 	$.ajax({
@@ -129,7 +124,7 @@ function agregar_usuario(dtoUsuario) {
 		type: 'post',
 		dataType: 'json',
 		async: false,
-		url: 'https://iestsdsids2.000webhostapp.com/Usuarios/usuario_agregar.php',
+		url: 'https://id15075672_bies_prueba.000webhostapp.com/BIES/usuario_agregar.php',
 		success: function(respuesta) {
 			resp_agre_usuario = respuesta['estado'];
 			dtoUsuario.setId = respuesta['idUsuarioNuevo'];
