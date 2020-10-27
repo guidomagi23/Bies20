@@ -17,12 +17,14 @@ function Base(){
 
 $('#btIngresar').click(ingresar);
 function ingresar(){
-	alert ("estoy en ingresar");
+	
     var inUsuario = $('#inUsuario');
 	
     var usuario = inUsuario.val().trim();
+	
     inUsuario.val(usuario);
-  
+	alert(usuario);
+    alert ("estoy en ingresar");
     var res_validar_ingreso = validar_ingreso(usuario);
 	
 	alert ("estoy en ingresar 2");

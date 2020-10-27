@@ -39,7 +39,7 @@ function validar_ingreso(usuario){
 	
 	alert("pase por resp leer usuario");
 	
-	est = validar_ingreso_est(usuario);
+	est = validar_estacionamiento(usuario);
 	
 	
 	
@@ -62,7 +62,7 @@ function validar_ingreso(usuario){
 	
 }
 
-function validar_ingreso_est(usuario){
+function validar_estacionamiento(usuario){
 	alert("Hola, estoy en validar_ingreso_est");
 	//Asigna el STRING Estacionado O Desestacionado recibido como parametro al objeto creado
 	usu_ingreso_est.setId_Estacionamiento = usuario;

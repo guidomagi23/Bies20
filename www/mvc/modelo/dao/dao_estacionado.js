@@ -22,8 +22,8 @@
 	//  "ok" (encontro al usuario)
 	alert ("entro a ver si esta estacionado ");
 		var est = "";
-	//Obtiene el dni del objeto recibido como parametro	
-		est = dtoEstacionamiento.getId_Estacionamiento;
+	//Obtiene eldel objeto recibido como parametro	
+		est = dtoEstacionamiento.getEstacionamiento;
 	//Pregunta si es numerico o vacio
 		if (est == "") { 
 	
@@ -42,7 +42,7 @@
 				success: function(respuesta) {
 					est = "OkayEst";
 	//Completa la informacion del DTO con la respuesta del servidor
-					dtoEstacionamiento.setId_Estacionamiento = respuesta['Id_usuario'];
+					dtoEstacionamiento.setEstacionamiento = respuesta['Id_usuario'];
 					
 					//alert ("paso por setid");
 					//dtoUsuario.setNombre = respuesta['Nombre'];	

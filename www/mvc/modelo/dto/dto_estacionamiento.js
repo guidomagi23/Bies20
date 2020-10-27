@@ -5,18 +5,17 @@
 // Contiene los metodos "set" y "get" para las 4 variables
 // 
 class DtoEstacionamiento {
-	constructor(setId_Estacionamiento = "") {
-		this.id_Estacionaminto = setId_Estacionamiento;
+	constructor(setEstacionamiento = "") {
+		this.est = setEstacionamiento;
 	}	
+
 	
-	
-	
-	set setId_Estacionamiento(est){
+	set setEstacionamiento(est){
 		this.est = est;
 	}
 	
 	
-	get getId_Estacionamiento(){
+	get getEstacionamiento(){
 		return this.est;
 	}
 	
