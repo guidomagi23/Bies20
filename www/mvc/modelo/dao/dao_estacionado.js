@@ -14,21 +14,23 @@
 // Retorna una "se�al" con el resultado del acceso al servidor y el 
 // mismo DTO recibido como parametro con la informacion (si habia)
 //
-function leer_por_dni(dtoUsuario) {
-	//Define la variable para responder si encontro o no el usuario
+
+	
+	function estacionar(dtoEstacionamiento){
+		//Define la variable para responder si encontro o no el usuario
 	//  Los valores posibles son "er" (error de conexion), "" (no encontro el usuario),
 	//  "ok" (encontro al usuario)
-	alert ("entro leer por dni");
-		var resp_leer_usuario = "";
+	alert ("entro a ver si esta estacionado ");
+		var est = "";
 	//Obtiene el dni del objeto recibido como parametro	
-		dni = dtoUsuario.getDni;
+		est = dtoEstacionamiento.getId_Estacionamiento;
 	//Pregunta si es numerico o vacio
-		if (isNaN(dni) || dni == "") { 
+		if (est == "") { 
 	
 		}else{ 
 	//Arma el "post" para enviarlo por ajax
 			var parametros = {
-				"Dni" : dni,
+				"resultado" : est,
 			};
 	//Invoca a la url donde se encuentra el archivo "usuario_leer_por_dni.php"
 			$.ajax({
@@ -36,11 +38,11 @@ function leer_por_dni(dtoUsuario) {
 				type: 'post',
 				dataType: 'json',
 				async: false,
-				url: 'https://b-ies.000webhostapp.com/BIES/usuario_login.php',
+				url: 'https://b-ies.000webhostapp.com/BIES/estacionamiento_si_o_no.php',
 				success: function(respuesta) {
-					resp_leer_usuario = "Okay";
+					est = "OkayEst";
 	//Completa la informacion del DTO con la respuesta del servidor
-					dtoUsuario.setId = respuesta['Id'];
+					dtoEstacionamiento.setId_Estacionamiento = respuesta['Id_usuario'];
 					
 					//alert ("paso por setid");
 					//dtoUsuario.setNombre = respuesta['Nombre'];	
@@ -51,15 +53,14 @@ function leer_por_dni(dtoUsuario) {
 				error: function(jqXHR, textStatus, errorMessage) {
 					respuestaNoRecibida(jqXHR, textStatus);
 					//alert ("paso por er");
-					resp_leer_usuario = "er";
+					est = "er";
 
 				}
 			});
 		}
-		alert(resp_leer_usuario);
-		return resp_leer_usuario;
+		alert(est);
+		return est;
 	}
-	
 	
 	function respuestaNoRecibida(jqXHR, textStatus){
 	//Informa el error, esto es solo de prueba, ya que se recuerda que el modelo

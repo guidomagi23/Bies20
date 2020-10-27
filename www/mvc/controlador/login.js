@@ -1,6 +1,8 @@
 document.getElementById('titulo').style.backgroundColor= "#7a1b0c";
 document.getElementById('pgLogin').style.backgroundColor= "#7a1b0c";
 
+
+
 $('#btRegistrarse').click(registrarse);
 function registrarse(){
 	window.location.href='../vista/registrarse.html?usuario=';
@@ -15,23 +17,31 @@ function Base(){
 
 $('#btIngresar').click(ingresar);
 function ingresar(){
+	alert ("estoy en ingresar");
     var inUsuario = $('#inUsuario');
+	
     var usuario = inUsuario.val().trim();
     inUsuario.val(usuario);
   
     var res_validar_ingreso = validar_ingreso(usuario);
+	
+	alert ("estoy en ingresar 2");
+	
     alert ("entro validar ingreso");
+	alert ("ahora aparece el dni");
+	alert (res_validar_ingreso);
+	
+	//no esta estacionado
     if (res_validar_ingreso == "1") {
-        window.location.href='../vista/estacionamiento.html?usuario=' + usuario;
-        alert ("Ingreso incorrecto");
+        window.location.href='../vista/estacionamiento.html?usuario=';
     }else{
+		//esta estacionado
         if (res_validar_ingreso == "2"){
-            window.location.href='../vista/estacionamiento.html?usuario=' + usuario;
+            window.location.href='../vista/detalle_estacionamiento.html?usuario=';
         }else{
-            if (res_validar_ingreso == "3" ) {
-                window.location.href='../vista/menu_sistema.html?usuario='+ usuario + '&id=' + usu_ingreso.getId;
-            }else{
-                alert("ERROR!!!!");
+			//error dni
+            if (res_validar_ingreso == "er" ) {
+                alert("Ingreso no identificado");
             }
         }
     }

@@ -7,12 +7,12 @@
 class DtoUsuario {
 	constructor(setId = 0, setNombre = '', 
 				setDni = 0 
-				//setContrasena = ''
+				//setEstacionado = ''
 				) {
 		this.id = setId;
 		this.nombre = setNombre;
 		this.dni = setDni;
-		//this.contrasena = setContrasena;
+		//this.est = setEstacionado;
 	}	
 	
 	set setId(id) {
@@ -27,10 +27,17 @@ class DtoUsuario {
 		this.dni = dni;
 	}	
 	
+	//set setEstacionado(est){
+		//this.est = est;
+	//}
+	
 	//set setContrasena(contrasena) {
 	//	this.contrasena = contrasena;
 	//}	
-
+	
+	//get getEstacionado(){
+		//return this.est
+	//}
 	
 	get getId() {
 		return this.id;
