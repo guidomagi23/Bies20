@@ -1,12 +1,8 @@
 
-// "DTO" destinada a transportar los datos correspondientes a
-// la tabla "Usuarios" del modelo. 
-// Las columnas de la tabla son "id", "nombre", "dni" y "contrasena"
-// Contiene los metodos "set" y "get" para las 4 variables
-// 
-class DtoEstacionamiento {
-	constructor(setEstacionamiento = "") {
+class DtoEstacionamiento{
+	constructor(setEstacionamiento = '',setUsuario = 0) {
 		this.est = setEstacionamiento;
+		this.usuario = setUsuario;
 	}	
 
 	
@@ -17,6 +13,15 @@ class DtoEstacionamiento {
 	
 	get getEstacionamiento(){
 		return this.est;
+	}
+	
+	set setUsuario(usuario){
+		this.usuario = usuario;
+	}
+	
+	
+	get getUsuario(){
+		return this.usuario;
 	}
 	
 

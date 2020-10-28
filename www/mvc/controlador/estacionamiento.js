@@ -1,6 +1,13 @@
 document.getElementById('titulo').style.backgroundColor= "#7a1b0c";
 document.getElementById('pgEstacionamiento').style.backgroundColor= "#7a1b0c";
 
+function mostrarporc(){
+	var x = $('#inPorcentajeDar');
+	x.val("hola ");
+}
+
+
+
 $('#btAtrasLogin').click(atrasLogin);
 function atrasLogin(){
     window.location.href='../vista/login.html';

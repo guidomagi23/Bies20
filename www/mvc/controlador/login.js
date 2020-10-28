@@ -23,23 +23,19 @@ function ingresar(){
     var usuario = inUsuario.val().trim();
 	
     inUsuario.val(usuario);
-	alert(usuario);
-    alert ("estoy en ingresar");
+	
+ 
     var res_validar_ingreso = validar_ingreso(usuario);
 	
-	alert ("estoy en ingresar 2");
 	
-    alert ("entro validar ingreso");
-	alert ("ahora aparece el dni");
-	alert (res_validar_ingreso);
 	
 	//no esta estacionado
-    if (res_validar_ingreso == "1") {
-        window.location.href='../vista/estacionamiento.html?usuario=';
+    if (res_validar_ingreso == "Desestacionado") {
+        window.location.href='../vista/estacionamiento.html?usuario='+ usuario;
     }else{
 		//esta estacionado
-        if (res_validar_ingreso == "2"){
-            window.location.href='../vista/detalle_estacionamiento.html?usuario=';
+        if (res_validar_ingreso == "Estacionado"){
+            window.location.href='../vista/detalle_estacionamiento.html?usuario='+ usuario;
         }else{
 			//error dni
             if (res_validar_ingreso == "er" ) {
@@ -47,4 +43,9 @@ function ingresar(){
             }
         }
     }
+	
+	
+	
 }
+
+

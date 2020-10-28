@@ -10,7 +10,7 @@
 		<link rel="stylesheet"  href="registrarse.css"/ > 
     </head>
 <!-- Cuerpo -->
-    <body 
+    <body onload="mostrarporc()"
     <div data-role="page" id="pgEstacionamiento">
             <div id="titulo" data-role="header">
                 <h1 style = "font-size: 40px;">B-IES</h1>
@@ -20,7 +20,8 @@
 				<h2 style = "font-size: 20px;">Seleccione el estacionamiento</h2>
                     <label id="lbDisponibilidad" >Disponibilidad:</label>
                     <br>
-                    <label id="lbPorcentajeDar" >X:</label>
+                    <label id="lbPorcentajeDar" >x:</label>
+					<input type="text" id="inPorcentajeDar" value="" disabled>
                     <button class="ui-btn" id="btDar">DAR</button>
                     <label id="lbPorcentajeSanJeronimo" >Y:</label>
                     <button class="ui-btn" id="btSanJeronimo">San Jerónimo</button>

@@ -18,7 +18,7 @@ function leer_por_dni(dtoUsuario) {
 	//Define la variable para responder si encontro o no el usuario
 	//  Los valores posibles son "er" (error de conexion), "" (no encontro el usuario),
 	//  "ok" (encontro al usuario)
-	alert ("entro leer por dni");
+	
 		var resp_leer_usuario = "";
 	//Obtiene el dni del objeto recibido como parametro	
 		dni = dtoUsuario.getDni;
@@ -40,7 +40,7 @@ function leer_por_dni(dtoUsuario) {
 				success: function(respuesta) {
 					resp_leer_usuario = "Okay";
 	//Completa la informacion del DTO con la respuesta del servidor
-					dtoUsuario.setId = respuesta['Id'];
+					dtoUsuario.setId = respuesta['Id_usuario'];
 					
 					//alert ("paso por setid");
 					//dtoUsuario.setNombre = respuesta['Nombre'];	
@@ -56,7 +56,7 @@ function leer_por_dni(dtoUsuario) {
 				}
 			});
 		}
-		alert(resp_leer_usuario);
+		
 		return resp_leer_usuario;
 	}
 	
