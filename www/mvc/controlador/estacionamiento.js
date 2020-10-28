@@ -13,27 +13,30 @@ function cerrarSesion(){
 
 $('#btAtras').click(atras);
 function atras(){
-    window.location.href='../vista/estacionamiento.html';
+    window.location.href='../vista/login.html';
 }
 
 $('#btDar').click(Dar);
 function Dar(){
-	window.location.href='../vista/detalle_estacionamiento.html';
+    window.location.href='../vista/detalle_estacionamiento.html';
+    alert("Te has estacionado en DAR");
 }
 
 $('#btSanJeronimo').click(SanJeronimo);
 function SanJeronimo(){
-	window.location.href='../vista/detalle_estacionamiento.html';
+    window.location.href='../vista/detalle_estacionamiento.html';
+    alert("Te has estacionado en San Jeronimo");
 }
 
 $('#btTucuman').click(Tucuman);
 function Tucuman(){
-	window.location.href='../vista/detalle_estacionamiento.html';
+    window.location.href='../vista/detalle_estacionamiento.html';
+    alert("Te has estacionado en Tucuman");
 }
 
 $('#btIrse').click(Irse);
 function Irse(){
     alert("Has abandonado el estacionamiento");
-    window.location.href='../vista/estacionamiento.html'
+    window.location.href='../vista/login.html'
 }
 
