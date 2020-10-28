@@ -1,15 +1,13 @@
 document.getElementById('titulo').style.backgroundColor= "#7a1b0c";
 document.getElementById('pgEstacionamiento').style.backgroundColor= "#7a1b0c";
 
-function mostrarporc(){
-	var x = $('#inPorcentajeDar');
-	x.val("hola ");
+function mostrarPorc(){
+	var porDar = $('#lbPorcentajeDar');
+    porDar.val("hola ");
 }
 
-
-
-$('#btAtrasLogin').click(atrasLogin);
-function atrasLogin(){
+$('#btCerrarSesion').click(cerrarSesion);
+function cerrarSesion(){
     window.location.href='../vista/login.html';
 }
 
@@ -36,13 +34,6 @@ function Tucuman(){
 $('#btIrse').click(Irse);
 function Irse(){
     alert("Has abandonado el estacionamiento");
-    document.getElementById("btIrse").disabled = true;
-    document.getElementById("btEstacionar").disabled = false;
+    window.location.href='../vista/estacionamiento.html'
 }
 
-$('#btEstacionar').click(Estacionar);
-function Estacionar(){
-    alert("Has estacionado");
-    document.getElementById("btIrse").disabled = false;
-    document.getElementById("btEstacionar").disabled = true;
-}
