@@ -1,6 +1,3 @@
-
-
-	
 function ver_estado(dtoEstacionamiento){
 
 	var est = "";
@@ -48,6 +45,3 @@ function ver_estado(dtoEstacionamiento){
 		alert("Error de conexion, intente mas tarde");
 		alert (textStatus + jqXHR.status);
 	}
-	
-	
-	

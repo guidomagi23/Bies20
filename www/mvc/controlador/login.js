@@ -30,22 +30,33 @@ function ingresar(){
 	
 	
 	//no esta estacionado
-    if (res_validar_ingreso == "Desestacionado") {
-        window.location.href='../vista/estacionamiento.html?usuario='+ usuario;
-    }else{
-		//esta estacionado
-        if (res_validar_ingreso == "Estacionado"){
-            window.location.href='../vista/detalle_estacionamiento.html?usuario='+ usuario;
-        }else{
+    //if (res_validar_ingreso == "Desestacionado") {
+    //    window.location.href='../vista/estacionamiento.html?usuario='+ usuario;
+   // }else{
+	//	//esta estacionado
+   //     if (res_validar_ingreso == "Estacionado"){
+    //        window.location.href='../vista/detalle_estacionamiento.html?usuario='+ usuario;
+   //     }else{
 			//error dni
-            if (res_validar_ingreso == "er" ) {
-                alert("Ingreso no identificado");
-            }
-        }
-    }
+   //         if (res_validar_ingreso == "er" ){
+   //             alert("Ingreso no identificado");
+   //         }else(res_validar_ingreso = "error"){
+	//			alert("Ingreso no identificado 2");
+	//		}
+   //     }
+    //}
 	
-	
-	
+			if(res_validar_ingreso == "Desestacionado"){
+				window.location.href='../vista/estacionamiento.html?usuario='+ usuario;
+			} else if (res_validar_ingreso == "Estacionado"){
+				window.location.href='../vista/detalle_estacionamiento.html?usuario='+ usuario;
+			} else if (res_validar_ingreso == "er" ){
+				alert("Advertencia: Error de conexión.");
+			}else if(res_validar_ingreso = "error"){
+				alert("Advertencia: Ingreso no identificado.")
+			}			
 }
+	
+
 
 

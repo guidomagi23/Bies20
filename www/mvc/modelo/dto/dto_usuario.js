@@ -1,9 +1,3 @@
-
-// "DTO" destinada a transportar los datos correspondientes a
-// la tabla "Usuarios" del modelo. 
-// Las columnas de la tabla son "id", "nombre", "dni" y "contrasena"
-// Contiene los metodos "set" y "get" para las 4 variables
-// 
 class DtoUsuario {
 	constructor(setId = 0, setNombre = '', 
 				setDni = 0 
