@@ -36,7 +36,7 @@ function SanJeronimo(){
 	var res = validar_sanjeronimo(usuario);
 
 	if(res == "ok"){
-		alert("Te has estacionado en SAN JERONIMO");
+		alert("Te has estacionado en SAN JERÓNIMO");
 		window.location.href='../vista/detalle_estacionamiento.html';
 	}else {
 		alert("Error al estacioanar.");
@@ -61,8 +61,8 @@ function Tucuman(){
 $('#btIrse').click(Irse);
 function Irse(){
     usuario = dni_logueado;
-	alert("dni_logueado");
-	alert(usuario);
+	//alert("dni_logueado");
+	//alert(usuario);
 	
 	var res = validar_desestacionar(usuario);
 

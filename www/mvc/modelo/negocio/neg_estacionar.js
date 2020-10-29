@@ -47,9 +47,7 @@ function validar_desestacionar(dni){
 	//var usu_nuevo = new DtoEstacionar();
 	var id = 0;
 	usu_nuevo.setDni = dni;
-	
-	alert("alert(usu_nuevo.getDni = dni);");
-	alert(usu_nuevo.getDni);
+
 	
 	//funcionando
 	resp_agr = desestacionar(saber_id(usu_nuevo));
