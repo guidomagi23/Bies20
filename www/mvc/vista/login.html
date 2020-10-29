@@ -10,7 +10,7 @@
 		<link rel="stylesheet"  href="login.css"/ > 
        
     </head>
-    <body		
+    <body	onload="inicializarVentana()">	
        <div data-role="page" id="pgLogin">
             <div id="titulo" data-role="header">
                  <h1 style = "font-size: 40px;">B-IES</h1>
@@ -52,6 +52,6 @@
         <script type="text/javascript" src="../modelo/utilidades/uti_sha256.js"></script>
 		<script type="text/javascript" src="../modelo/negocio/neg_login.js"></script>
 		<script type="text/javascript" src="../controlador/estacionamiento.js"></script>
-		
+		<script type="text/javascript" src="../modelo/dao/dao_desestacionar.js"></script>	
     </body>
 </html>

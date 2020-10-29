@@ -10,10 +10,10 @@
 		<link rel="stylesheet"  href="registrarse.css"/ > 
     </head>
 <!-- Cuerpo -->
-    <body 
-    <div data-role="page" id="pgEstacionamiento">
+    <body onload="inicializarVentana()">
+		<div data-role="page" id="pgEstacionamiento">
             <div id="titulo" data-role="header">
-                <h1 style = "font-size: 40px;">B-IES</h1>
+              <h1 style = "font-size: 40px;">B-IES</h1>
             </div>
             <div data-role="main" class="ui-content">
                 <form >
@@ -33,4 +33,18 @@
 		
         <script type="text/javascript" src="../controlador/estacionamiento.js"></script>
         <script type="text/javascript" src="../../cordova.js"></script>
+		<script type="text/javascript" src="../controlador/login.js"></script>
+        <script type="text/javascript" src="../modelo/dto/dto_usuario.js"></script>
+		<script type="text/javascript" src="../modelo/dto/dto_estacionar.js"></script>
+		<script type="text/javascript" src="../modelo/negocio/neg_estacionar.js"></script>
+        <script type="text/javascript" src="../modelo/dao/dao_usuario.js"></script>
+		<script type="text/javascript" src="../modelo/dao/dao_estacionado.js"></script>
+		<script type="text/javascript" src="../modelo/dao/dao_usuario_estacionamiento.js"></script>
+		<script type="text/javascript" src="../modelo/dao/dao_estacionar_dar.js"></script>
+		<script type="text/javascript" src="../modelo/dao/dao_desestacionar.js"></script>
+        <script type="text/javascript" src="../modelo/utilidades/uti_sha256.js"></script>
+		<script type="text/javascript" src="../modelo/negocio/neg_login.js"></script>
+		<script type="text/javascript" src="../modelo/dto/dto_estacionamiento.js"></script>
+		<script type="text/javascript" src="../modelo/dao/dao_desestacionar.js"></script>
+		
     </body>

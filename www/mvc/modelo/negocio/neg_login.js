@@ -6,8 +6,7 @@ var usu_ingreso_est = new DtoEstacionamiento();
 function validar_ingreso(usuario){
 
 	usu_ingreso.setDni = usuario;
-	alert("dni");
-	alert(usu_ingreso.getDni);
+
 	var resp_leer_usuario = "";
 	
 	resp_leer_usuario = leer_por_dni(usu_ingreso);

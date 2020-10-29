@@ -8,26 +8,31 @@ h2{
 	
     color: white; 
 	text-align: center;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: normal;
 }
 
 text{
 	
     color: white; 
-	text-align: center;
-	font-size: 16px;
-	font-weight: normal;
 	text-align: justify;
+	font-size: 20px;
+	font-weight: normal;
 	font-style:	normal;
+}
+text3{
+	
+    color: white; 
+	font-size: 20px;
+	font-weight: normal;
+	font-style:	normal;
+	text-align: justify;
 }
 
 textnegrita{
 	
 	color: white; 
-	text-align: center;
-	font-size: 16px;
-	
+	font-size: 20px;
 	text-align: justify;
 	font-style:	normal;
 	text-decoration: underline;

@@ -10,7 +10,7 @@
 		<link rel="stylesheet"  href="registrarse.css"/ > 
     </head>
 <!-- Cuerpo -->
-    <body
+    <body onload="inicializarVentana()"
     myFunction language="javascript"> Messenger ();
     <div data-role="page" id="pgEstacionamiento">
             <div id="titulo" data-role="header">
@@ -37,4 +37,16 @@
 		
         <script type="text/javascript" src="../controlador/estacionamiento.js"></script>
         <script type="text/javascript" src="../../cordova.js"></script>
+		<script type="text/javascript" src="../controlador/login.js"></script>
+        <script type="text/javascript" src="../modelo/dto/dto_usuario.js"></script>
+		<script type="text/javascript" src="../modelo/dto/dto_estacionar.js"></script>
+		<script type="text/javascript" src="../modelo/negocio/neg_estacionar.js"></script>
+        <script type="text/javascript" src="../modelo/dao/dao_usuario.js"></script>
+		<script type="text/javascript" src="../modelo/dao/dao_estacionado.js"></script>
+		<script type="text/javascript" src="../modelo/dao/dao_usuario_estacionamiento.js"></script>
+		<script type="text/javascript" src="../modelo/dao/dao_estacionar_dar.js"></script>
+        <script type="text/javascript" src="../modelo/utilidades/uti_sha256.js"></script>
+		<script type="text/javascript" src="../modelo/negocio/neg_login.js"></script>
+		<script type="text/javascript" src="../modelo/dto/dto_estacionamiento.js"></script>
+		
     </body>

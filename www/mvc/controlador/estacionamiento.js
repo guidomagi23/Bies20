@@ -17,17 +17,9 @@ $('#btDar').click(dar);
 function dar(){
 	
 	usuario = dni_logueado;
-	alert("boton 2");
 	
+	var res = validar_dar(usuario);
 
-	alert("dni dar");
-	alert(usuario);
-	
-	alert("controlador: tiene que aparecer el mensaje dentro de validar");
-	
-	var res = validar(usuario);
-	alert("boton 4");
-	alert("controlador dice: ");
 	if(res == "ok"){
 		alert("Te has estacionado en DAR");
 		window.location.href='../vista/detalle_estacionamiento.html';
@@ -38,20 +30,48 @@ function dar(){
 
 $('#btSanJeronimo').click(SanJeronimo);
 function SanJeronimo(){
-    window.location.href='../vista/detalle_estacionamiento.html';
-    alert("Te has estacionado en San Jeronimo");
+   
+	usuario = dni_logueado;
+	
+	var res = validar_sanjeronimo(usuario);
+
+	if(res == "ok"){
+		alert("Te has estacionado en SAN JERONIMO");
+		window.location.href='../vista/detalle_estacionamiento.html';
+	}else {
+		alert("Error al estacioanar.");
+		}
 }
 
 $('#btTucuman').click(Tucuman);
 function Tucuman(){
-    window.location.href='../vista/detalle_estacionamiento.html';
-    alert("Te has estacionado en Tucuman");
+   usuario = dni_logueado;
+	
+	var res = validar_tucuman(usuario);
+
+	if(res == "ok"){
+		alert("Te has estacionado en TUCUMAN");
+		window.location.href='../vista/detalle_estacionamiento.html';
+	}else {
+		alert("Error al estacioanar.");
+		}
 }
+
 
 $('#btIrse').click(Irse);
 function Irse(){
-    alert("Has abandonado el estacionamiento");
-    window.location.href='../vista/login.html'
+    usuario = dni_logueado;
+	alert("dni_logueado");
+	alert(usuario);
+	
+	var res = validar_desestacionar(usuario);
+
+	if(res == "ok"){
+		alert("Has abandonado el estacionamiento");
+		window.location.href='../vista/login.html';
+	}else {
+		alert("Error al dejar el estacionamiento.");
+		}
 }
 
 
@@ -61,6 +81,7 @@ function getParameterByName(name) {
     results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+
 
 // Funcion que se ejecuta al abrirse la ventana
 // obtiene el dni del get, descripcion y nivel del rol del usuario
@@ -73,7 +94,5 @@ function obtenerUsuario() {
 // para que ese usuario y a la funcion cargarRoles
 function inicializarVentana() {
 	obtenerUsuario();
-	alert("dni_logueado");
-	alert(dni_logueado);
 }
 
