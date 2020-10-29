@@ -1,8 +1,8 @@
-function leer_por_dni(dtoUsuario) {
+function saber_id(dtoUsuario) {
 	//Define la variable para responder si encontro o no el usuario
 	//  Los valores posibles son "er" (error de conexion), "" (no encontro el usuario),
 	//  "ok" (encontro al usuario)
-	
+	alert("entre al saber id");
 		var resp_leer_usuario = "";
 	//Obtiene el dni del objeto recibido como parametro	
 		dni = dtoUsuario.getDni;
@@ -22,9 +22,11 @@ function leer_por_dni(dtoUsuario) {
 				async: false,
 				url: 'https://b-ies.000webhostapp.com/BIES/usuario_login.php',
 				success: function(respuesta) {
-					resp_leer_usuario = "Okay";
+					
 	//Completa la informacion del DTO con la respuesta del servidor
 					dtoUsuario.setId = respuesta['Id_usuario'];
+					alert(dtoUsuario.getId);
+					resp_leer_usuario = dtoUsuario.getId;
 					//alert ("paso por setid");
 					//dtoUsuario.setNombre = respuesta['Nombre'];	
 					//dtoUsuario.setDni = respuesta['Dni'];
