@@ -35,3 +35,8 @@ textnegrita{
 	font-style:	normal;
 	text-decoration: underline;
 }
+
+.ui-btn{
+	border-radius: 30px;
+	
+}
